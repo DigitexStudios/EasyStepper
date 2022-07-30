@@ -1,0 +1,24 @@
+#######################################
+# Syntax Coloring Map For StepServo
+#######################################
+ 
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+ 
+StepServo KEYWORD1
+ 
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+ 
+moveTo KEYWORD2
+moveBy KEYWORD2
+setEndStops KEYWORD2
+run KEYWORD2
+setRPM KEYWORD2
+setMicrosteps KEYWORD2
+enable KEYWORD2
+setBlockingMode KEYWORD2
+setStepAngle KEYWORD2
+zero KEYWORD2
