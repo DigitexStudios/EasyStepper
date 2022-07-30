@@ -1,6 +1,8 @@
 # Stepper-Servo
 An Arduino library to control a stepper motor as you would a servo.
 
+**This library is still in development, so please report any issues, and I'll do my best to fix them as soon as I see them.**
+
 ## DOCUMENTATION
 
 
@@ -13,8 +15,6 @@ An Arduino library to control a stepper motor as you would a servo.
 `motor.disable()` - This will disable the motor. It can be turned freely, and will not respond to commands. Motor is enabled by default.
 
 `motor.setRPM( < RPM > )` - This sets the motor's speed, in Rotations Per Minute. 60 by default.
-**WARNING! SETTING RPM TO A NEGATIVE VALUE WILL *NOT* MAKE THE MOTOR RUN BACKWARDS! It will just break your code.**
-**Similarly, setting RPM to 0 will break your code as well, so don't do it.**
 
 `motor.setEndStops( < Endstop 1 >, < Endstop 2 > )` - This sets the lower and upper endstops, in degrees. This prevents the motor from turning too far in your specific project. The motor will stop moving once it hits this point. If told to move to a position beyond this point, the motor will move to the nearest stop instead. Defaults are 0 and 360.
 
