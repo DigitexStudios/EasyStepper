@@ -4,8 +4,8 @@
     Copyright (c) Liam Timpane, 2022. All rights reserved.
 */
 
-#ifndef Morse_h
-#define Morse_h
+#ifndef StepServo_h
+#define StepServo_h
 
 #include <Arduino.h>
 
@@ -31,7 +31,7 @@ class StepServo
         bool endStopCollision;
         bool enabled;
         bool blocking;
-        bool currentAngle;
+        double currentAngle;
         void zero();
         long currentSteps;
         long demandSteps;
