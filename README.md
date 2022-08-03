@@ -5,7 +5,8 @@ An Arduino library to control a stepper motor as you would a servo.
 
 ## EXAMPLE CIRCUIT AND CODE
 
-![Untitled Sketch_bb](https://user-images.githubusercontent.com/62073336/182626789-e580275d-4008-4cdd-a46b-498246059e37.jpg)
+![Untitled Sketch_bb](https://user-images.githubusercontent.com/62073336/182627307-1eee23dc-9c01-4f42-9313-197c71c8b828.png)
+
 
 ```
 /*
