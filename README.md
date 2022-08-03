@@ -5,7 +5,8 @@ An Arduino library to control a stepper motor as you would a servo.
 
 ## EXAMPLE CIRCUIT AND CODE
 
-![Untitled Sketch_bb](https://user-images.githubusercontent.com/62073336/182627307-1eee23dc-9c01-4f42-9313-197c71c8b828.png)
+
+![Sketch2](https://user-images.githubusercontent.com/62073336/182627705-b19bb305-1a0f-4cd7-832f-45f257f7430f.jpg)
 
 
 ```
@@ -19,7 +20,7 @@ An Arduino library to control a stepper motor as you would a servo.
 
 #include "StepServo.h" // Include the stepper servo library
 
-StepServo motor(2, 3, 4); // Create the motor object. The stepper driver has the STP pin on pin 3, DIR pin on pin 2, and ENABLE pin on pin 4.
+StepServo motor(3, 2, 4); // Create the motor object. The stepper driver has the STP pin on pin 3, DIR pin on pin 2, and ENABLE pin on pin 4.
 
 void setup() {
   
