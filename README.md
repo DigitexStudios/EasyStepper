@@ -18,7 +18,7 @@ An Arduino library to control a stepper motor as you would a servo.
 
 #include "StepServo.h" // Include the stepper servo library
 
-StepServo motor(3, 2, 4); // Create the motor object. The stepper driver has the STP pin on pin 3, DIR pin on pin 2, and ENABLE pin on pin 4.
+StepServo motor(2, 3, 4); // Create the motor object. The stepper driver has the STP pin on pin 3, DIR pin on pin 2, and ENABLE pin on pin 4.
 
 void setup() {
   
