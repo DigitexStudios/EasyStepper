@@ -6,7 +6,29 @@ An Arduino library to control a stepper motor as you would a servo.
 ## EXAMPLE CIRCUIT AND CODE
 
 
-![Sketch2](https://user-images.githubusercontent.com/62073336/182627705-b19bb305-1a0f-4cd7-832f-45f257f7430f.jpg)
+Circuit layout:
+```
+Arduino UNO pin 5V    -->   A4988 pin VDD
+Arduino UNO pin GND   -->   A4988 pin GND
+Arduino UNO pin 5V    -->   A4988 pin MS2
+Arduino UNO pin D2    -->   A4988 pin DIR
+Arduino UNO pin D3    -->   A4988 pin STP
+Arduino UNO pin D4    -->   A4988 pin ENA
+
+12V Power supply VCC  -->   A4988 pin VMOT
+12V Power supply GND  -->   A4988 pin VGND
+
+A4988 pin RST         -->   A4988 pin SLP
+
+A4988 pin 2B          -->   Motor wire 1
+A4988 pin 2A          -->   Motor wire 2
+A4988 pin 1A          -->   Motor wire 3
+A4988 pin 1B          -->   Motor wire 4
+```
+
+
+![Sketch3](https://user-images.githubusercontent.com/62073336/182631033-084fe140-caa6-464d-8442-d0df0c561677.png)
+
 
 
 ```
