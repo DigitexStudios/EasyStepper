@@ -3,6 +3,9 @@ An Arduino library to control a stepper motor as you would a servo, with automat
 
 **This library is still in development, so please report any issues, and I'll do my best to fix them as soon as I see them.**
 
+
+This library is intended for use with dedicated stepper driver modules (A4988, TMC2209, etc)
+
 ## EXAMPLE CIRCUIT AND CODE
 
 
