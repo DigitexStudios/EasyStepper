@@ -58,7 +58,7 @@ void setup() {
 
 void loop() {
   
-  motor.setRPM(30); // Set the motor to 60 RPM (1 rotation per 2 seconds)
+  motor.setRPM(30); // Set the motor to 30 RPM (1 rotation per 2 seconds)
   motor.moveTo(360); // Rotate to 360 degrees
   
   Serial.println(motor.currentAngle);
