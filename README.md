@@ -1,4 +1,4 @@
-# StepServo
+# EasyStepper
 An Arduino library to control a stepper motor as you would a servo, with automatic positioning and motion. No FOR loops, no dealing with pin numbers, none of the complicated stuff. All you need to do is setup your motor in a working circuit, and the library does the rest!
 
 **This library is still in development, so please report any issues, and I'll do my best to fix them as soon as I see them.**
@@ -43,9 +43,9 @@ A4988 pin 1B          -->   Motor wire 4
 
 
 
-#include "StepServo.h" // Include the stepper servo library
+#include "EasyStepper.h" // Include the stepper servo library
 
-StepServo motor(3, 2, 4); // Create the motor object. The stepper driver has the STP pin on pin 3, DIR pin on pin 2, and ENABLE pin on pin 4.
+EasyStepper motor(3, 2, 4); // Create the motor object. The stepper driver has the STP pin on pin 3, DIR pin on pin 2, and ENABLE pin on pin 4.
 
 void setup() {
   
@@ -77,7 +77,7 @@ void loop() {
 
 
 ### Methods
-`StepServo motor( < step pin >, < dir pin >, < enable pin > )`- The class used by this library. In this case, the name is `motor`, but can be anything you like.
+`EasyStepper motor( < step pin >, < dir pin >, < enable pin > )`- The class used by this library. In this case, the name is `motor`, but can be anything you like.
 
 
 `motor.enable()` - This will enable the motor. It will lock in place and move when commanded to. Motor is enabled by default.
