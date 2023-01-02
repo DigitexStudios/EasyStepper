@@ -4,9 +4,9 @@
  * Created by Liam Timpane
  */
 
-#include "StepServo.h" // Include the stepper servo library
+#include "EasyStepper.h" // Include the stepper servo library
 
-StepServo motor(3, 2, 4); // Create the motor object. The stepper driver has the STP pin on pin 3, DIR pin on pin 2, and ENABLE pin on pin 4.
+EasyStepper motor(3, 2, 4); // Create the motor object. The stepper driver has the STP pin on pin 3, DIR pin on pin 2, and ENABLE pin on pin 4.
 
 void setup() {
   
