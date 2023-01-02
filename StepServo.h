@@ -4,15 +4,15 @@
     Copyright (c) Liam Timpane, 2022. All rights reserved.
 */
 
-#ifndef StepServo_h
-#define StepServo_h
+#ifndef EasyStepper_h
+#define EasyStepper_h
 
 #include <Arduino.h>
 
 class StepServo
 {
     public:
-        StepServo(int stepPin, int dirPin, int enPin);
+        EasyStepper(int stepPin, int dirPin, int enPin);
         void run();
         void moveTo(double deg);
         void moveBy(double deg);
