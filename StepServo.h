@@ -1,5 +1,5 @@
 /*
-    StepServo.h - Library for controlling a stepper motor like a servo
+    EasyStepper.h - Library for easy stepper control
     Created by Liam Timpane, June 30, 2022
     Copyright (c) Liam Timpane, 2022. All rights reserved.
 */
@@ -9,7 +9,7 @@
 
 #include <Arduino.h>
 
-class StepServo
+class EasyStepper
 {
     public:
         EasyStepper(int stepPin, int dirPin, int enPin);
