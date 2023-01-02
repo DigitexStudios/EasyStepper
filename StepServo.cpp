@@ -1,13 +1,13 @@
 /*
-    StepServo.h - Library for controlling a stepper motor like a servo
+    EasyStepper.h - Library for simplified stepper control
     Created by Liam Timpane, June 30, 2022
     Copyright (c) Liam Timpane, 2022. All rights reserved.
 */
 
 #include "Arduino.h"
-#include "StepServo.h"
+#include "EasyStepper.h"
 
-StepServo::StepServo(int stepPin, int dirPin, int enPin)
+EasyStepper::EasyStepper(int stepPin, int dirPin, int enPin)
 {
     pinMode(stepPin, OUTPUT);
     pinMode(dirPin, OUTPUT);
@@ -28,47 +28,47 @@ StepServo::StepServo(int stepPin, int dirPin, int enPin)
     debug = false;
 }
 
-void StepServo::setEndStops(double startDeg, double endDeg)
+void EasyStepper::setEndStops(double startDeg, double endDeg)
 {
     endStop1 = startDeg;
     endStop2 = endDeg;
 }
 
-void StepServo::setRPM(double speed)
+void EasyStepper::setRPM(double speed)
 {
     RPM = speed;
     delayTime = ((stepAngle) / (RPM * 6)) * 1000000 * microSteps;
 }
 
-void StepServo::useBlockingMode(bool state)
+void EasyStepper::useBlockingMode(bool state)
 {
     blocking = state;
 }
 
-void StepServo::setStepAngle(double angle)
+void EasyStepper::setStepAngle(double angle)
 {
     stepAngle = angle;
 }
 
-void StepServo::setMicrosteps(double microstps)
+void EasyStepper::setMicrosteps(double microstps)
 {
     microSteps = microstps;
     delayTime = ((stepAngle) / (RPM * 6)) * 1000000 * microSteps;
 }
 
-void StepServo::enable()
+void EasyStepper::enable()
 {
     digitalWrite(enPinNumber, LOW);
     enabled = true;
 }
 
-void StepServo::disable()
+void EasyStepper::disable()
 {
     digitalWrite(enPinNumber, HIGH);
     enabled = false;
 }
 
-void StepServo::moveTo(double deg)
+void EasyStepper::moveTo(double deg)
 {
     delayTime = ((stepAngle) / (RPM * 6)) * 1000000 * microSteps;
     demandSteps = (deg / (stepAngle * microSteps));
@@ -111,7 +111,7 @@ void StepServo::moveTo(double deg)
     }
 }
 
-void StepServo::moveBy(double deg)
+void EasyStepper::moveBy(double deg)
 {
     delayTime = ((stepAngle) / (RPM * 6)) * 1000000 * microSteps;
     demandSteps += (deg / (stepAngle * microSteps));
@@ -154,7 +154,7 @@ void StepServo::moveBy(double deg)
     }
 }
 
-void StepServo::run()
+void EasyStepper::run()
 {
 
     if (currentSteps < demandSteps)
@@ -188,6 +188,6 @@ void StepServo::run()
     }
 }
 
-void StepServo::zero() {
+void EasyStepper::zero() {
     currentSteps = 0;
 }
